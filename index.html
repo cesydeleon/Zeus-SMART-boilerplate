@@ -10,8 +10,13 @@
   and what other code files the browser needs to download for the page.  -->
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Page Title Here</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Jeff Farkas | Engineer, runner, coffee addict.</title>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <!-- Javascript is used to make things move and respond to things the user does. -->
   <!-- This loads the code in your index.js file and automatically runs it when the page loads -->
@@ -20,11 +25,137 @@
   <!-- CSS is used to customize the look and feel of your website -->
   <!-- The same HTML can look very different with different css, see here for some cool examples: -->
   <!-- http://www.csszengarden.com/ -->
-  
+
   <!-- This loads the styles in your index.css file and automatically applies them to the page  -->
   <link rel="stylesheet" type="text/css" href="src/index.css" >
 </head>
 <body>
-  
+  <div id="header" class="row align-items-center no-gutters background-color-white">
+    <div class="col-sm-1 text-center">
+      <span class="header-title text-color-green">
+        > Jeff Farkas <
+      </span>
+    </div>
+    <div class="col-sm-10">
+      <ul class="nav header-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#about-me">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#work">Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="hero" class="row no-gutters align-items-center background-color-red">
+    <div class="col-sm-6">
+      <img class="hero-image img-full-width" src="src/img/jeff_1.jpg"/>
+    </div>
+    <div class="col-sm-2 offset-2">
+      <div class="hero-title text-color-white">Jeff Farkas</div>
+      <div class="hero-text text-color-white">
+        <h6>> Engineer</h6>
+        <h6>> Runner</h6>
+        <h6>> Coffee Addict</h6>
+      </div>
+    </div>
+  </div>
+  <div id="about-me" class="section-row row no-gutters align-items-center background-color-light-green">
+    <div class="col-sm-12">
+      <h1 class="section-title text-color-green">About Me</h1>
+    </div>
+    <div class="col-sm-3 offset-sm-1 text-center">
+      <h4 class="section-header text-center text-color-white">> Personal Information <</h4>
+      <table id="personal-information-table" class="table text-left text-color-green">
+        <tbody>
+          <tr>
+            <td>Name:</td>
+            <td>Jeff Farkas</td>
+          </tr>
+          <tr>
+            <td>Age:</td>
+            <td>29 Years</td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><a target="_blank" href="mailto:jeff@jefffarkas.com">jeff@jefffarkas.com</a></td>
+          </tr>
+          <tr>
+            <td>City:</td>
+            <td>San Francisco, CA</td>
+          </tr>
+          <tr>
+            <td>Coffee:</td>
+            <td>Cappuccino</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-4 text-center">
+      <img class="img-bordered" src="src/img/jeff_2.jpg">
+    </div>
+    <div class="col-sm-3">
+      <h4 class="section-header text-center text-color-white">> My Story <</h4>
+      <br />
+      <div class="text-color-green">I'm a software engineer by trade and problem solver at heart. I thrive in environments with unique challenges and complex problems.</div>
+      <br />
+      <div class="text-color-green">Running is my meditation and my means of exploration. It helps to focus my mind and can turn a big city into a little town.</div>
+      <br />
+      <div class="text-color-green">There is nothing like enjoying a wonderful cappuccino in the park. In fact, I think I'll go get one right now.</div>
+    </div>
+  </div>
+  <div id="work" class="row section-row no-gutters align-items-center background-color-purple">
+    <div class="col-sm-12">
+      <h1 class="section-title text-color-white">Work</h1>
+    </div>
+    <div class="col-sm-6 text-center text-color-white">
+      <h3>> Previous <</h3>
+      <div class="work-item">
+        <div>
+          <img class="img-bordered" src="src/img/fg.png" />
+        </div>
+        <div>
+          <h2>French Girls</h2>
+        </div>
+        <div>
+          <span>Take selfies. Get drawings. Commission real artists.</span>
+        </div>
+        <div>
+          <a class="link-alt" target="_blank" href="https://www.frenchgirlsapp.com/">https://www.frenchgirlsapp.com/</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 text-center text-color-white">
+      <h3>> Current <</h3>
+      <div class="work-item">
+        <div>
+          <img class="img-bordered" src="src/img/zeus.png" />
+        </div>
+        <div>
+          <h1>Zeus</h1>
+        </div>
+        <div>
+          <span>Smartly furnished neighborhood homes for extended stays.</span>
+        </div>
+        <div>
+          <a class="link-alt" target="_blank" href="http://www.zeusliving.com/">https://www.zeusliving.com/</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contact" class="row section-row no-gutters align-items-center background-color-red">
+    <div class="col-sm-12">
+      <h1 class="section-title text-color-white">Contact</h1>
+    </div>
+    <div class="col-sm-12 text-center">
+      <h3 class="text-color-white">> Email Me! <</h3>
+      <h2>
+        <a id="contact-link" class="link-alt" target="_blank" href="mailto:jeff@jefffarkas.com">jeff@jefffarkas.com</a>
+      </h2>
+    </div>
+  </div>
 </body>
 </html>

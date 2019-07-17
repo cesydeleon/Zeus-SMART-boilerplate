@@ -1,0 +1,108 @@
+/* Common */
+
+a {
+    font-weight: bold;
+    color: #7B0828;
+}
+
+a:hover {
+    color: #003300;
+}
+
+a.link-alt {
+    font-weight: bold;
+    color: #FBF5F3;
+}
+
+a.link-alt:hover {
+    color: #8DAA9D;
+}
+
+.section-row {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 75px;
+}
+.section-title {
+    padding: 10px;
+}
+
+.img-full-width {
+    width: 100%;
+}
+
+.img-bordered {
+    border: 5px solid #FBF5F3;
+    padding: 5px;
+}
+
+.text-color-green {
+    color: #003300;
+}
+
+.text-color-light-green {
+    color: #8DAA9D;
+}
+
+.text-color-white {
+    color: #FBF5F3;
+}
+
+.text-color-red {
+    color: #7B0828;
+}
+
+.text-color-purple {
+    color: #522B47;
+}
+
+.background-color-green {
+    background-color: #003300;
+}
+
+.background-color-light-green {
+    background-color: #8DAA9D;
+}
+
+.background-color-white {
+    background-color: #FBF5F3;
+}
+
+.background-color-red {
+    background-color: #7B0828;
+}
+
+.background-color-purple {
+    background-color: #522B47;
+}
+
+
+/* Header */
+
+.header-title {
+    font-weight: bold;
+    font-size:16px;
+}
+
+/* Hero */
+
+.hero-title {
+    font-size: 48pt;
+}
+
+/* About Me */
+
+#personal-information-table td {
+    border-top: none;
+    border-bottom: 1px solid #FBF5F3;
+}
+
+#personal-information-table td:first-child {
+    font-weight: bold;
+}
+
+/* Work */
+
+.work-item div {
+    padding-top: 15px;
+}
