@@ -13,10 +13,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Page Title Here</title>
 
-  <!-- Javascript is used to make things move and respond to things the user does. -->
-  <!-- This loads the code in your index.js file and automatically runs it when the page loads -->
-  <script src="src/index.js" ></script>
-
   <!-- CSS is used to customize the look and feel of your website -->
   <!-- The same HTML can look very different with different css, see here for some cool examples: -->
   <!-- http://www.csszengarden.com/ -->
@@ -25,6 +21,24 @@
   <link rel="stylesheet" type="text/css" href="src/index.css" >
 </head>
 <body>
-  
+  <div id="gallows">
+    <div>Guesses:</div>
+    <div id="wrong-guesses">
+    </div>
+  </div>
+
+  <div>Answer:</div>
+  <div id="word-spaces">
+  </div>
+
+  <div>
+    <!-- Add something here that let's you enter in a single letter and something that submits that letter as your guess -->
+  </div>
+
+   <!-- Javascript is used to make things move and respond to things the user does. -->
+  <!-- This loads a bunch of code called JQuery from the internet that give us nice tools for changing what is on the website. -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <!-- This loads the code in your index.js file and automatically runs it when the page loads -->
+  <script src="src/index.js" ></script>
 </body>
 </html>

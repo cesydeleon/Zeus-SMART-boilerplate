@@ -1,0 +1,32 @@
+#gallows {
+  margin-bottom: 12px;
+}
+
+#wrong-guesses {
+  display: inline-flex;
+  background: beige;
+  min-width: 120px;
+  min-height: 28px;
+  padding: 0 8px;
+}
+
+.wrong-guess {
+  height: 28px;
+  text-align: center;
+  margin-right: 8px;
+  line-height: 28px;
+}
+
+#word-spaces {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.word-space {
+  width: 34px;
+  height: 28px;
+  border-bottom: 1px solid black;
+  text-align: center;
+  margin-right: 4px;
+  line-height: 34px;
+}
