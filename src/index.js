@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event){
   let wrongGuesses = 0; // The number of times you have guessed wrong
   let correctGuesses = 0; // The number of letters you found correctly
   let guesses = []; // All the guesses you have made
+  let bodyParts = ['#head', '#body', '#left-arm', '#right-arm', '#left-leg', '#right-leg'];
 
   let $wrongGuesses = $("#wrong-guesses");
 
@@ -41,10 +42,17 @@ document.addEventListener("DOMContentLoaded", function(event){
       correctGuesses = correctGuesses + foundPositions.length;
     } else {
       $wrongGuesses.append(`<div class="wrong-guess">${guess}</div>`);
+      $(bodyParts[wrongGuesses]).css('display', 'block');
       wrongGuesses = wrongGuesses + 1;
     }
     guesses.push(guess);
     $("#guess-input").val("");
+    setTimeout(checkGameOver, 0);
+  }
+
+  $("#submit-guess").click(handleGuess);
+
+  function checkGameOver() {
     if (wrongGuesses >= maxWrongGuesses) {
       alert("You lose! :(");
       $("#submit-guess").off('click');
@@ -53,8 +61,6 @@ document.addEventListener("DOMContentLoaded", function(event){
       $("#submit-guess").off('click');
     }
   }
-
-  $("#submit-guess").click(handleGuess);
 
   //////////////////////////////
   // Make sure the guess is a single letter
