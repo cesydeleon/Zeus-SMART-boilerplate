@@ -1,0 +1,32 @@
+body {
+  text-align: center;
+  font-family: "Pacifico", cursive;
+}
+
+h1 {
+  font-size: 48px;
+  color: #eaff81;
+  text-shadow: 2px 2px 4px black;
+}
+
+.board {
+  margin: 100px auto;
+  width: 330px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  border: solid;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.status {
+  margin-top: 20px;
+}
