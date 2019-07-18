@@ -12,22 +12,19 @@ document.addEventListener("DOMContentLoaded", function(event){
   let correctGuesses = 0; // The number of letters you found correctly
   let guesses = []; // All the guesses you have made
 
-  let $wordSpaces = $("#word-spaces");
-  let $submitGuess = $("#submit-guess");
-  let $guessInput = $("#guess-input");
   let $wrongGuesses = $("#wrong-guesses");
 
   for (let i = 0; i < secretWord.length; i++) {
-    $wordSpaces.append(`<div id="word-space-${i}" class="word-space"></div>`);
+    $("#word-spaces").append(`<div id="word-space-${i}" class="word-space"></div>`);
   }
 
   //////////////////////////////
   // Check a guess
   /////////////////////////////
-  $submitGuess.click(() => {
-    let guess = $guessInput.val().toLowerCase();
+  function handleGuess() {
+    let guess = $("#guess-input").val().toLowerCase();
     if (!isOkGuess(guess)) {
-      $guessInput.val("");
+      $("#guess-input").val("");
       return;
     }
     let foundPositions = [];
@@ -47,15 +44,17 @@ document.addEventListener("DOMContentLoaded", function(event){
       wrongGuesses = wrongGuesses + 1;
     }
     guesses.push(guess);
-    $guessInput.val("");
+    $("#guess-input").val("");
     if (wrongGuesses >= maxWrongGuesses) {
       alert("You lose! :(");
-      $submitGuess.off('click');
+      $("#submit-guess").off('click');
     } else if (correctGuesses >= secretWord.length) {
       alert("You won! :)");
-      $submitGuess.off('click');
+      $("#submit-guess").off('click');
     }
-  });
+  }
+
+  $("#submit-guess").click(handleGuess);
 
   //////////////////////////////
   // Make sure the guess is a single letter
