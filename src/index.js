@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function(event){
   /////////////////////////////
   function isLetter(guess) {
     return guess.match(/[a-z]/i);
-    // return (65 <= guess.charCodeAt(0) <= 90) || (97 <= guess.charCodeAt(0) <= 122);
+    // let charCode = guess.charCodeAt(0);
+    // return (65 <= charCode && charCode < 91) || (97 <= charCode && charCode < 122);
   }
 });
