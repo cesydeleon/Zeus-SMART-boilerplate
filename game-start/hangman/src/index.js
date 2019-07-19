@@ -17,16 +17,42 @@ $(document).ready(function() {
   let $wrongGuesses = $("#wrong-guesses");
 
    for (let i = 0; i < secretWord.length; i++) {
-    $("#word-spaces").append(`<div id="word-space-${i}" class="word-space"></div>`);
-  }
+     let g = $("#word-spaces")
+     g.append(`<div id="word-space-${i}" class="word-space"></div>`);
+   }
 
   //////////////////////////////
   // Check a guess
   /////////////////////////////
   function handleGuess() {
+   let letter = $("#guessbox").val()
+   let existingindex = guesses.indexOf(letter)
+   if (existingindex >= 0){
+     $("#guessbox").val("")
+     $("#error").css("display", "block")
+     return
+    }
+   guesses.push(letter)
+   // check if letter is inside secretWord
+    let index = secretWord.indexOf(letter)
+    if (index == -1) {
+      // alert("wrong answer " + letter) 
+      $('#wrong-guesses').append(letter)
+      wrongGuesses = wrongGuesses + 1
+    } else {
+      // alert("correct answer " + letter)
+      $('#word-space-' + index).append(letter)
+      correctGuesses = correctGuesses + 1
+      if (correctGuesses ==secretWord.length){
+        $("#endofgame").css("display", "block")
+      }
+
+    }
+  if (wrongGuesses == 6){alert('You Lost')}
 
   }
 
+$("#enterbutton").click(handleGuess)
   //////////////////////////////
   // Make sure the guess is a single letter
   // '' is wrong
